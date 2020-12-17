@@ -1,5 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/storage";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBk7T08dLBT-KrBOYNHI0Q90nS9abaARIk",
@@ -13,6 +15,11 @@ firebase.initializeApp(firebaseConfig);
 
 // Utils
 const auth = firebase.auth();
+const storage = firebase.storage();
+const db = firebase.firestore();
+
+// Collection references
+// const payrollsCollection = db.collection("payroll");
 
 // Exports
-export { auth };
+export { auth, storage, db };
